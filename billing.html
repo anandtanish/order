@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Spoon - Billing</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for animations */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Fade In animation for page transitions */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+
+    <div class="w-full max-w-2xl bg-white shadow-lg rounded-xl p-6 md:p-8 animate-fade-in">
+
+        <!-- Billing Page Content -->
+        <h2 class="text-4xl font-bold text-gray-800 mb-6 text-center">Place Your Order</h2>
+        <form action="thankyou.html" method="GET" class="space-y-6">
+            <div>
+                <label for="name" class="block text-gray-700 text-sm font-medium mb-2">
+                    Full Name
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                    placeholder="John Doe"
+                />
+            </div>
+            <div>
+                <label for="address" class="block text-gray-700 text-sm font-medium mb-2">
+                    Delivery Address
+                </label>
+                <textarea
+                    id="address"
+                    name="address"
+                    required
+                    rows="3"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 resize-none"
+                    placeholder="123 Main St, City, State, Zip"
+                ></textarea>
+            </div>
+            <div>
+                <label for="phone" class="block text-gray-700 text-sm font-medium mb-2">
+                    Phone Number
+                </label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
+                    placeholder="123-456-7890"
+                />
+            </div>
+            <div>
+                <label for="order" class="block text-gray-700 text-sm font-medium mb-2">
+                    Your Order (e.g., 1x Burger, 2x Fries)
+                </label>
+                <textarea
+                    id="order"
+                    name="order"
+                    required
+                    rows="5"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 resize-none"
+                    placeholder="List your items here..."
+                ></textarea>
+            </div>
+            <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-blue-300"
+            >
+                Submit Order
+            </button>
+        </form>
+
+    </div>
+
+</body>
+</html>
