@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Spoon - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for animations */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Home Page specific animations */
+        @keyframes fade-in-down {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoom-in {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .home-animate-fade-in-down { animation: fade-in-down 0.8s ease-out forwards; }
+        .home-animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards 0.2s; }
+        .home-animate-zoom-in { animation: zoom-in 0.8s ease-out forwards 0.4s; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+
+    <div class="w-full max-w-2xl bg-white shadow-lg rounded-xl p-6 md:p-8 animate-fade-in">
+
+        <!-- Home Page Content -->
+        <div class="text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-800 mb-4 home-animate-fade-in-down">
+                The Golden Spoon
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-8 home-animate-fade-in-up">
+                Experience culinary excellence with our exquisite dishes. Fresh ingredients, unforgettable flavors.
+            </p>
+            <img
+                src="https://placehold.co/600x400/FFD700/333333?text=Delicious+Food"
+                alt="Delicious Food"
+                class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-8 home-animate-zoom-in"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x400/FFD700/333333?text=Image+Error';"
+            />
+
+            <!-- Menu Items Section -->
+            <div class="mt-12 mb-10 text-left">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Our Popular Dishes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <h3 class="text-xl font-semibold text-gray-900">Classic Cheeseburger</h3>
+                        <p class="text-gray-600">Juicy patty, cheddar, lettuce, tomato, special sauce.</p>
+                        <span class="text-lg font-bold text-green-700 mt-2 block">$12.99</span>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <h3 class="text-xl font-semibold text-gray-900">Spicy Chicken Tacos</h3>
+                        <p class="text-gray-600">Grilled chicken, fresh salsa, avocado, spicy crema.</p>
+                        <span class="text-lg font-bold text-green-700 mt-2 block">$10.50</span>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <h3 class="text-xl font-semibold text-gray-900">Vegetarian Lasagna</h3>
+                        <p class="text-gray-600">Layers of pasta, rich marinara, ricotta, fresh vegetables.</p>
+                        <span class="text-lg font-bold text-green-700 mt-2 block">$14.00</span>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="bg-gray-50 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+                        <h3 class="text-xl font-semibold text-gray-900">Chocolate Lava Cake</h3>
+                        <p class="text-gray-600">Warm chocolate cake with a molten center, vanilla ice cream.</p>
+                        <span class="text-lg font-bold text-green-700 mt-2 block">$7.50</span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Menu Items Section -->
+
+            <a
+                href="billing.html"
+                class="inline-block bg-gradient-to-r from-orange-500 to-red-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-orange-300"
+            >
+                Order Now
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
